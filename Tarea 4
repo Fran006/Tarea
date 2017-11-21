@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Tarea 4}
+\author{Francisca Carrasco }
+\date{November 2017}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+Un feedback vertex set de un grafo G es un subconjunto S de sus nodos con la propriedad que G − S es aciclico. Por el problema Feedback Vertex Set recibimos un grafo G y un entero k y tenemos que decir si hay un feedback vertex set en G de tamaño no más que k.
+
+• Muestre que Feedback Vertex Set est´a en NP. (De verdad, es NP-complete — i.e., en NP y NP-hard — pero no tiene que mostrar eso la segunda parte.)\\
+
+
+  Es NP-complete ya que si tenemos un conjunto de nodos X perteneciente a G y X siendo menor a k. Y si de G removemos X, nos quedamos con S, el cual sólo faltaría verificar que sea aciclico. 
+  El elimina nodos para que el grafo este libre de ciclos equivale a encontrar un Spanning Tree, que se realiza en tiempo polinomial.\\
+
+• Muestre que, dado una caja negra que dice “si” o “no” correctamente por instancias de Feedback Vertex Set, puedes usarla para encontrar un feedback vertex set minimo. (Una caja así se llama un oracle y esta propriedad del problema se llama self-reducibility — pero no tiene que saber eso.)\\\\
+Dependiendo de la instancia, sea "si" o "no", se crearán dos conjuntos de nodos, los que "sean si" y los que "sean no", los cuales los últimos se eliminan, quedando con el conjunto que habria que verificar si es o no aciclico.\\
+
+\section{}
+ Por el problema Hamiltonian Path recibimos un grafo G y tenemos que decir si hay un camino que visita cada nodo exactamente una vez. Muestre que Hamiltonian Path se puede
+reducir en tiempo polinomial al problema Integer Linear Programming. (Consejo: use un variable por cada nodo, indicando si es un extremo del camino, y un variable por cada arista, indicando si está en el camino.)
+
+Lo que hay que hacer es: sea la matriz x{ij}  igual 1 si existe forma de llegar de i a j, y 0 en otro caso, para el conjunto de nodos 0,..., n. Sean u{i} para i = 1,..., n variables que indicará que es una arista no perteneciente a la solucion final y óptima y sea c{ij} la distancia de i a j
+\begin{figure}[h]
+\centering
+\includegraphics{foto.jpg}
+\caption
+\label{}
+\end{figure}
+
+\end{document}
